@@ -65,12 +65,12 @@ function App() {
   getVisitCounts();
   return (
     <div className="App">
-      <div>
+      <div className="center">
       <h1> Hello, Welcome {cookies.name}!</h1>
       <h2> You've visited us {cookies.visit} time</h2>
       <img src={cookies.color + ".png"} alt={cookies.color} width="200" height="200" /> 
       </div>
-      <div>
+      <div className="button">
         <button onClick={deleteAllCookies}> Delete All Cookies </button>
         <button onClick={generateReport}> Generate A Report</button>
       </div>
