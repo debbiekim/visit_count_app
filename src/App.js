@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 
 const cookies = document.cookie
 .split(';')
@@ -19,7 +20,6 @@ const setCookie = (cookiename, cookievalue) => {
 const deleteAllCookies = (cookiepath = '/') => {
   console.log("delete cookie");
   document.cookie.split(';').forEach(function(c) {
-    console.log("C: " + c);
     document.cookie = c.trim().split('=')[0] + '=;expires=Thu, 01 Jan 1970 00:00:01 UTC; path='+cookiepath;
   });
 };
@@ -66,7 +66,7 @@ function App() {
   return (
     <div className="App">
       <div>
-      <h1> Hello Welcome {cookies.name}!</h1>
+      <h1> Hello, Welcome {cookies.name}!</h1>
       <h2> You've visited us {cookies.visit} time</h2>
       <img src={cookies.color + ".png"} alt={cookies.color} width="200" height="200" /> 
       </div>
