@@ -19,6 +19,7 @@ const setCookie = (cookiename, cookievalue) => {
 const deleteAllCookies = (cookiepath = '/') => {
   console.log("delete cookie");
   document.cookie.split(';').forEach(function(c) {
+    console.log("C: " + c);
     document.cookie = c.trim().split('=')[0] + '=;expires=Thu, 01 Jan 1970 00:00:01 UTC; path='+cookiepath;
   });
 };
